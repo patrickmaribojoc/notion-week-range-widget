@@ -1,0 +1,27 @@
+<html>
+    <body>
+    <div id="week-range"></div>
+    </body>
+    <style>
+        body{
+            background-color: rgb(25, 25, 25);;
+            font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+            color: rgb(255, 255, 255);
+            display: block;
+            font-size: 1.17em;
+            font-weight: bold;
+        }
+    </style>
+    <script type="text/javascript">
+
+        let currentDate = new Date();
+        let firstDateOfTheWeek = currentDate.getDate() - currentDate.getDay();
+        let lastDateOfTheWeek = firstDateOfTheWeek + 6;
+
+        const humanReadableMonth = currentDate.getMonth() + 1;
+
+        const weekRange = 'Week of ' + humanReadableMonth + '/' + firstDateOfTheWeek + ' - ' + humanReadableMonth + '/' + lastDateOfTheWeek;
+
+        document.getElementById('week-range').innerHTML = weekRange;  
+    </script>
+</html>
